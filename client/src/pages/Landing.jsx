@@ -23,6 +23,8 @@ const Landing = () => {
       // Send a POST request to the backend with the video URL
       // const response = await axios.post("http://localhost:5100/analyze", { videoLink });
       const response = await axios.post("https://youtube-analytics-ljdf.onrender.com/analyze", { videoLink });
+
+                                       
       // If the request is successful, navigate to the results page and pass the data
       navigate("/result", { state: { data: response.data } });
     } catch (error) {
