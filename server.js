@@ -15,7 +15,9 @@ const PORT = 5000;
 app.use(express.json());
 
 app.use(cors({
-    origin: "http://localhost:5173", // Replace with your frontend URL
+    origin: ["http://localhost:5173",  // Replace with your frontend URL
+  "https://youtube-analytics-ljdf.onrender.com"],
+  methods: ["GET", "POST"]
   }));
   
 
